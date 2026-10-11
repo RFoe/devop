@@ -1,0 +1,241 @@
+{
+  "http.proxy": "http://127.0.0.1:1081",
+  "https.proxy": "http://127.0.0.1:1081",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[cmake]": {
+    "editor.defaultFormatter": "cheshirekow.cmake-format"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "cmake.environment": {
+    "CMAKE_TOOLCHAIN_FILE": "/home/wang/git-repositories/vcpkg/scripts/buildsystems/vcpkg.cmake",
+    "VCPKG_TARGET_TRIPLET": "x64-linux",
+    "__CXX_PRECOMPILE_MODULE_DIR__": "/home/wang/.local/lib/cxxpcm",
+    "__GIT_REPOSITORIES__": "/home/wang/git-repositories"
+  },
+  "clangd.environment": {
+    "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libtcmalloc.so.4"
+  },
+  "clangd.arguments": [
+    "--compile-commands-dir=${workspaceFolder}/build",
+    "--background-index",
+    "--background-index-priority=normal",
+    "-j=4",
+    "--pretty",
+    "--query-driver=/usr/bin/clang++",
+    "--all-scopes-completion",
+    "--completion-style=bundled",
+    "--header-insertion=never",
+    "--header-insertion-decorators",
+    "--pch-storage=memory",
+    "--function-arg-placeholders=true",
+    "--enable-config",
+    "--clang-tidy",
+    "--log=error"
+  ],
+  "python.languageServer": "Pylance",
+  "python.analysis.autoFormatStrings": true,
+  "yapf.args": [
+    "--style",
+    "{based_on_style=pep8, indent_width=4, column_limit=120}"
+  ],
+  "flake8.args": [
+    "--max-line-length=120",
+    "--ignore=E501,W503"
+  ],
+  "cmakeFormat.mergeEnv": false,
+  // settings.json
+  // markdown-formatter conf
+  // 将未指明语言类型的代码区转化为js代码块,
+  // "markdownFormatter.codeAreaToBlock": "js",
+  // 或者不转化
+  // 各种符号后是否需要空格
+  "markdownFormatter.spaceAfterFullWidthOrHalfWidth": "half",
+  // 在文件首部显示时间
+  "markdownFormatter.displayTime": true,
+  // 是否格式化表格
+  "markdownFormatter.codeAreaToBlock": "",
+  // 中文标点格式化为英文
+  "markdownFormatter.fullWidthTurnHalfWidth": "，：；！“”‘’（）？。",
+  "markdownFormatter.formatOpt": {
+    "indent_size": 2
+  },
+  "markdownFormatter.formatULSymbol": true,
+  "markdownFormatter.formatULSymbolOpt": {
+    "tag": [
+      "*",
+      "+",
+      "-"
+    ]
+  },
+  "markdownFormatter.formatTable": true,
+  // 配合下面在[markdown]中设置的等宽字体, 中文是英文的二倍宽度,用于表格对齐
+  "markdownFormatter.formatTableOpt": {
+    "chineseCharterWidth": 2
+  },
+  "[markdown]": {
+    // 自动保存
+    "editor.formatOnSave": false,
+    // 显示空格
+    "editor.renderWhitespace": "all",
+    // 快速补全
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    // snippet 提示优先
+    "editor.snippetSuggestions": "top",
+    "editor.tabCompletion": "on",
+    // 使用enter 接受提示
+    "editor.acceptSuggestionOnEnter": "on",
+    // 默认格式化工具为本工具
+    "editor.defaultFormatter": "mervin.markdown-formatter",
+    // 在markdown文件内,使用中文宽度为英文2倍的等宽字体: losevka, 表格的排版会更好看
+    "editor.fontFamily": "MesloLGS NF",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": "explicit"
+    }
+  },
+  "editor.quickSuggestions": {
+    "other": "inline",
+    "comments": "inline",
+    "strings": "inline"
+  },
+  "editor.snippetSuggestions": "top",
+  "compiler-explorer.default.options": {
+    "compiler": "x86-64 clang (reflection - C++26)",
+    "language": "c++",
+    "options": "-std=c++26 -fparameter-reflection -freflection-latest",
+    "input": "active",
+    "output": "webview",
+    "exec": "",
+    "stdin": "",
+    "cmakeArgs": "",
+    "src": "workspace",
+    "filters": {
+      "binaryObject": false,
+      "binary": false,
+      "execute": true,
+      "intel": true,
+      "demangle": true,
+      "labels": true,
+      "libraryCode": true,
+      "directives": true,
+      "commentOnly": true,
+      "trim": false,
+      "debugCalls": false
+    }
+  },
+  "vue.autoInsert.dotValue": true,
+  "vue.editor.focusMode": true,
+  "vue.format.script.initialIndent": true,
+  "vue.format.style.initialIndent": true,
+  "vue.inlayHints.destructuredProps": true,
+  "vue.inlayHints.inlineHandlerLeading": true,
+  "vue.inlayHints.missingProps": true,
+  "vue.inlayHints.optionsWrapper": true,
+  "vue.inlayHints.vBindShorthand": true,
+  "vue.suggest.componentNameCasing": "alwaysKebabCase",
+  "vue.suggest.propNameCasing": "alwaysKebabCase",
+  "prettier.arrowParens": "avoid",
+  "eslint.validate": [
+    "javascript",
+    "vue",
+    "typescript"
+  ],
+  "markdownlint.config": {},
+  "problems-copy.useSimpleTemplate": true,
+  "python.defaultInterpreterPath": "/bin/python3",
+  "parameterHints.languages": [
+    "php",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "editor.inlayHints.enabled": "on",
+  "[cpp]": {
+    "editor.inlayHints.enabled": "on"
+  },
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#3789d62d",
+    "editor.lineHighlightBorder": "#3bbcc61f",
+    "editorRuler.foreground": "#ff4081",
+    "editorInlayHint.foreground": "#E06C75",
+    "editorInlayHint.background": "#00000000",
+    "[Vira*]": {
+      "statusBar.debuggingBackground": "#80CBC433",
+      "statusBar.debuggingForeground": "#80CBC4",
+      "toolbar.activeBackground": "#80CBC426",
+      "button.background": "#80CBC4",
+      "button.hoverBackground": "#80CBC4cc",
+      "extensionButton.separator": "#80CBC433",
+      "extensionButton.background": "#80CBC414",
+      "extensionButton.foreground": "#80CBC4",
+      "extensionButton.hoverBackground": "#80CBC433",
+      "extensionButton.prominentForeground": "#80CBC4",
+      "extensionButton.prominentBackground": "#80CBC414",
+      "extensionButton.prominentHoverBackground": "#80CBC433",
+      "activityBarBadge.background": "#80CBC4",
+      "activityBar.activeBorder": "#80CBC4",
+      "activityBarTop.activeBorder": "#80CBC4",
+      "list.inactiveSelectionIconForeground": "#80CBC4",
+      "list.activeSelectionForeground": "#80CBC4",
+      "list.inactiveSelectionForeground": "#80CBC4",
+      "list.highlightForeground": "#80CBC4",
+      "sash.hoverBorder": "#80CBC480",
+      "list.activeSelectionIconForeground": "#80CBC4",
+      "scrollbarSlider.activeBackground": "#80CBC480",
+      "editorSuggestWidget.highlightForeground": "#80CBC4",
+      "textLink.foreground": "#80CBC4",
+      "progressBar.background": "#80CBC4",
+      "pickerGroup.foreground": "#80CBC4",
+      "tab.activeBorder": "#80CBC4",
+      "tab.activeBorderTop": "#80CBC400",
+      "tab.unfocusedActiveBorder": "#80CBC4",
+      "tab.unfocusedActiveBorderTop": "#80CBC400",
+      "tab.activeModifiedBorder": "#80CBC400",
+      "notificationLink.foreground": "#80CBC4",
+      "editorWidget.resizeBorder": "#80CBC4",
+      "editorWidget.border": "#80CBC4",
+      "settings.modifiedItemIndicator": "#80CBC4",
+      "panelTitle.activeBorder": "#80CBC4",
+      "breadcrumb.activeSelectionForeground": "#80CBC4",
+      "menu.selectionForeground": "#80CBC4",
+      "menubar.selectionForeground": "#80CBC4",
+      "editor.findMatchBorder": "#80CBC4",
+      "selection.background": "#80CBC440",
+      "statusBarItem.remoteBackground": "#80CBC414",
+      "statusBarItem.remoteHoverBackground": "#80CBC4",
+      "statusBarItem.remoteForeground": "#80CBC4",
+      "notebook.inactiveFocusedCellBorder": "#80CBC480",
+      "chat.slashCommandForeground": "#80CBC4",
+      "chat.avatarForeground": "#80CBC4",
+      "editor.lineHighlightBackground": "#ffffff0f",
+      "editor.lineHighlightBorder": "#ffffff00",
+      "activityBarBadge.foreground": "#000000",
+      "button.foreground": "#000000",
+      "statusBarItem.remoteHoverForeground": "#000000"
+    }
+  },
+  "editor.allowVariableFonts": true,
+  "sonarlint.focusOnNewCode": true,
+  "editor.fontFamily": "Ubuntu Mono Regular",
+  "viraTheme.solidLineHighlight": true,
+  "terminal.integrated.fontFamily": "Ubuntu Mono Regular",
+}

@@ -1,0 +1,443 @@
+{
+  // clang-format 扩展的配置
+  "clang-format.style": "file",
+  "clang-format.executable": "/usr/bin/clang-format",
+  "clang-format.fallbackStyle": "LLVM",
+  "editor.formatOnSave": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "eslint.workingDirectories": [
+    "./"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "[cmake]": {
+    "editor.defaultFormatter": "cheshirekow.cmake-format"
+  },
+  "[python]": {
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "eeyore.yapf",
+    "editor.formatOnType": false
+  },
+  "remote.SSH.remotePlatform": {
+    "arch": "linux",
+    "root": "linux",
+    "192.168.164.128": "linux",
+    "ubuntu": "linux"
+  },
+  "editor.rulers": [
+    90,
+  ],
+  "git.ignoreLegacyWarning": true,
+  "git.enabled": false,
+  "git.autorefresh": false,
+  "remote.SSH.configFile": "C:\\Users\\Lenovo\\.ssh\\config",
+  "remote.SSH.maxReconnectionAttempts": 8,
+  "remote.SSH.connectTimeout": 60,
+  "C_Cpp.errorSquiggles": "disabled",
+  "C_Cpp.intelliSenseEngineFallback": "disabled",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "C_Cpp.default.compilerArgs": [
+    "-std=c++23"
+  ],
+  "C_Cpp.default.cppStandard": 23,
+  "cmake.showOptionsMovedNotification": false,
+  "cmake.generator": "Ninja",
+  "cmake.configureSettings": {
+    "CMAKE_EXPORT_COMPILE_COMMANDS": 1,
+  },
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "editor.snippetSuggestions": "inline",
+  "editor.quickSuggestions": {
+    "other": "inline",
+    "comments": "inline",
+    "strings": "inline"
+  },
+  "editor.tabCompletion": "onlySnippets",
+  "editor.fontFamily": "",
+  "animations.Install-Method": "Custom CSS and JS",
+  "animations.Enabled": true,
+  "animations.CursorAnimationOptions": {
+    "Color": "#ffb6c1",
+    "TrailLength": 5
+  },
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash",
+      "args": [
+        "--login"
+      ]
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": [
+        "--login"
+      ]
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    },
+    "sh": {
+      "path": "/bin/sh"
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Windows PowerShell": {
+      "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.localEchoStyle": "dim",
+  "security.workspace.trust.untrustedFiles": "open",
+  "winopacity.opacity": 230,
+  "animations.CursorAnimation": true,
+  "animations.UseCursorColorForCursorAnimation": true,
+  "custom-ui-style.external.imports": [
+    "file:///c:/Users/Lenovo/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
+  "editor.minimap.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "window.systemColorTheme": "light",
+  "markdown-preview-enhanced.mermaidTheme": "dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.inlayHints.enabled": "off",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#3789d62d",
+    "editor.lineHighlightBorder": "#3bbcc61f",
+    "editorRuler.foreground": "#ff4081"
+  },
+  "workbench.editorAssociations": {
+    "*.hex": "hexEditor.hexedit",
+    "*.db": "hexEditor.hexedit",
+    "*.bin": "hexEditor.hexedit",
+    "*.img": "hexEditor.hexedit",
+    "*.ini": "hexEditor.hexedit",
+  },
+  "editor.wordWrap": "off",
+  "diffEditor.wordWrap": "off",
+  "editor.guides.indentation": true,
+  "editor.guides.bracketPairs": true,
+  "todohighlight.keywords": [
+    {
+      "text": "@NOTE",
+      "color": "#fff",
+      "backgroundColor": "#67C23A",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "@BUG",
+      "color": "#fff",
+      "backgroundColor": "#F56C6C",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "@INFO",
+      "color": "#fff",
+      "backgroundColor": "#909399",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "@PLACEHOLDER",
+      "color": "#fff",
+      "backgroundColor": "#909399",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "@HACK",
+      "color": "#fff",
+      "backgroundColor": "#E040FB",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "@TODO",
+      "color": "#FFFFFF",
+      "backgroundColor": "#FFB900",
+      "overviewRulerColor": "#FFB900"
+    },
+    {
+      "text": "@CHANGE-LOG",
+      "color": "#FFFFFF",
+      "backgroundColor": "#FFB900",
+      "overviewRulerColor": "#FFB900"
+    },
+    {
+      "text": "@FIXME",
+      "color": "#FFFFFF",
+      "backgroundColor": "#E51400",
+      "overviewRulerColor": "#E51400"
+    }
+  ],
+  "better-comments.tags": [
+    {
+      "tag": "@comment",
+      "color": "#c2687e",
+      "strikethrough": false,
+      "underline": true,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": true
+    },
+  ],
+  "search.followSymlinks": false,
+  "editor.quickSuggestionsDelay": 100,
+  "files.insertFinalNewline": true,
+  "editor.fontSize": 18,
+  "var-translate-en.baiduAppid": "<YOUR_APPID>",
+  "var-translate-en.baiduSecretKey": "<YOUR_SECRET_KEY>",
+  "var-translate-en.translateServe": "baidu",
+  "explorer.confirmDelete": false,
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "hexeditor.columnWidth": 16,
+  "hexeditor.showDecodedText": true,
+  "hexeditor.defaultEndianness": "little",
+  "hexeditor.inspectorType": "aside",
+  "editor.semanticTokenColorCustomizations": {
+    "[One Dark Pro Night Flat]": {
+      "rules": {
+        // bold declaration
+        "namespace": {
+          "bold": true,
+          "foreground": "#CC4E52"
+        },
+        "concept": {
+          "bold": true,
+          "foreground": "#CE6700"
+        },
+        "type": {
+          "bold": true
+        },
+        "class": {
+          "bold": true
+        },
+        "function": {
+          "bold": true
+        },
+        "method": {
+          "bold": true
+        },
+        // a dedicated color for macro
+        "macro": "#BEB7FF",
+        // a dedicated color for global variables
+        "variable.globalScope": {
+          "bold": true,
+          "foreground": "#C8C8C8",
+        },
+        // italic parameters
+        "parameter": {
+          "italic": true
+        },
+        "typeParameter": {
+          "bold": true,
+          "italic": true
+        },
+        "property": {
+          "foreground": "#F07178",
+          "fontStyle": "italic",
+        },
+        "property.declaration": {
+          "foreground": "#F07178",
+          "fontStyle": "italic"
+        },
+        "variable.other.property": {
+          "foreground": "#F07178",
+          "fontStyle": "italic"
+        },
+        // color non-type template paramter as variable
+        "typeParameter.readonly": {
+          "foreground": "#9CDCFE",
+        },
+        // color deduced 'auto' consistently
+        "*.deduced": "#569CD6",
+        // color variable 
+        // don't color differconsistentlyently on readonly modifier because of a clangd bug (maybe a feature)
+        "variable.readonly.globalScope": "#C8C8C8",
+        "variable.readonly.fileScope": "#C8C8C8",
+        "property.readonly.classScope": "#9CDCFE",
+        "variable.readonly.classScope": "#C8C8C8",
+        "parameter.readonly.functionScope": "#9CDCFE",
+        "variable.readonly.functionScope": "#9CDCFE",
+        "variable.readonly.localScope": "#9CDCFE",
+      }
+    }
+  },
+  "workbench.preferredDarkColorTheme": "Moon Light",
+  "oneDarkPro.editorTheme": "One Dark Pro Mix",
+  "oneDarkPro.bold": true,
+  "doxdocgen.generic.authorEmail": "rfoe2768@gmail.com",
+  "doxdocgen.generic.authorName": "rfoe",
+  "doxdocgen.file.copyrightTag": [
+    "@copyright Copyright (C) rfoe {year}"
+  ],
+  "markdownFormatter.formatOpt": {},
+  "makefile.configureOnOpen": false,
+  "cmake.showConfigureWithDebuggerNotification": false,
+  "debug.allowBreakpointsEverywhere": true,
+  "workbench.startupEditor": "none",
+  "markdownlint.config": {},
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.ignoreFiles": [
+    "**/.git/**",
+    "**/node_modules/**",
+    ".vscode/**",
+    "**/temp/**",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.ts"
+  ],
+  "css.enabledLanguages": [
+    "html",
+    "typescript",
+    "javascript",
+    "css"
+  ],
+  "css.styleSheets": [
+    "src/**/*.css",
+    "**/*.css"
+  ],
+  "css.autoValidation": "Never",
+  "css.completion.triggerPropertyValueCompletion": true,
+  "css.completion.completePropertyWithSemicolon": true,
+  "css.format.enable": true,
+  "css.lint.idSelector": "ignore",
+  "html-css-class-completion.excludeGlobPattern": "",
+  "html-css-class-completion.JavaScriptLanguages": [
+    "javascript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "files.associations": {
+    ".clangd": "yaml",
+    "*.{asm,inc,s,nasm,yasm,-----------------------------------------}": "asm-x86-nasm"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "cpp": false
+  },
+  "cmake.showNotAllDocumentsSavedQuestion": false,
+  "workbench.colorTheme": "One Dark Pro Night Flat",
+  "vue-helper.framework": "element-plus",
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "doxdocgen.file.customTag": [],
+  "lldb.launch.sourceLanguages": [
+    "c++",
+    "rust"
+  ],
+  "redhat.telemetry.enabled": true,
+  "sonarlint.ls.javaHome": "/usr/lib/jvm/java-17-openjdk-amd64",
+  "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "/usr/lib/jvm/java-17-openjdk-amd64",
+      "default": true
+    }
+  ],
+  "sonarlint.automaticAnalysis": false,
+  "sonarlint.rules": {
+    "java:S1481": {
+      "level": "off"
+    }
+  },
+  "comment-divider.lineFiller": "*",
+  "comment-divider.mainHeaderHeight": "line",
+  "comment-divider.mainHeaderTransform": "lowercase",
+  "comment-divider.shouldLengthIncludeIndent": true,
+  "comment-divider.subheaderTransform": "lowercase",
+  "comment-divider.length": 70,
+  "divider.lines": 4,
+  "divider.endColumn": 70,
+  "divider.text.level1": "/",
+  "divider.text.level2": "/",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "editor.suggest.showStatusBar": true,
+  "bookmarks.sideBar.expanded": true,
+  "errorLens.statusBarColorsEnabled": true,
+  "vsicons.presets.hideExplorerArrows": true,
+  "vsicons.presets.yamlOfficial": true,
+  "vsicons.presets.tsOfficial": true,
+  "vsicons.presets.nestjs": true,
+  "vsicons.presets.jsonOfficial": true,
+  "vsicons.presets.jsOfficial": true,
+  "vsicons.presets.angular": true,
+  "material-icon-theme.files.color": "#26a69a",
+  "material-icon-theme.folders.theme": "specific",
+  "CppHelper.HeaderGuardPattern": "__{FILE}__",
+  "leetcode.endpoint": "leetcode-cn",
+  "leetcode.workspaceFolder": "/home/wang/.leetcode",
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.hint.commentDescription": false,
+  "leetcode.defaultLanguage": "cpp",
+  "leetcode.hint.commandShortcut": false,
+  "lldb.suppressUpdateNotifications": true,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "python.analysis.typeCheckingMode": "standard",
+  "chat.editing.confirmEditRequestRetry": false,
+  "claudeCode.preferredLocation": "sidebar",
+  "asm-code-lens.assembler": "nasm (x86)",
+  "vscode_custom_css.imports": [
+    "file:///c:/Users/Lenovo/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.9/dist/updateHandler.js"
+  ],
+  "claudeCode.hideOnboarding": true,
+  "claudeCode.showMessageTimestamps": true
+}

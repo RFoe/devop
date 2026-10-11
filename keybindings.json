@@ -1,0 +1,15 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+oem_1",
+        "command": "cursorLineEnd"
+    },
+    {
+        "key": "shift shift",
+        "command": "extension.var-translate-en"
+    },
+    // {
+    //     "key": "ctrl+shift+v",
+    //     "command": "-extension.var-translate-en"
+    // }
+]

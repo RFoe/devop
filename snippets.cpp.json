@@ -1,0 +1,184 @@
+{
+	"Namespace": {
+		"prefix": [
+			"namespace",
+			"ns"
+		],
+		"body": [
+			"namespace ${1:name} __attribute__((__visibility__(\"default\"))) {",
+			"\t$0",
+			"} // namespace $1 __attribute__((__visibility__(\"default\")))"
+		],
+		"description": "Namespace with trailing comment"
+	},
+	"Module Declaration (C++23)": {
+		"prefix": "module",
+		"body": "export module ${1:module_name};",
+		"description": "C++23 module declaration (export module)"
+	},
+	"Module Import (C++23)": {
+		"prefix": "import",
+		"body": "export import ${1:module_name};",
+		"description": "C++23 module import (export import)"
+	},
+	"Concept (C++20)": {
+		"prefix": "concept",
+		"body": [
+			"template<typename ${1:T}>",
+			"concept ${2:ConceptName} = requires($1 ${3:var}) {",
+			"\t${4:expression};",
+			"};",
+			"$0"
+		],
+		"description": "C++20 concept definition"
+	},
+	"Auto Function (C++14)": {
+		"prefix": "auto-function",
+		"body": [
+			"auto ${1:function_name}(${2:args}) ${3:-> ${4:return_type}} {",
+			"\t$0",
+			"}"
+		],
+		"description": "Auto-return type function"
+	},
+	"Structured Binding (C++17)": {
+		"prefix": "auto-bind",
+		"body": "auto& [${1:var1}, ${2:var2}] = ${3:container};",
+		"description": "Structured binding declaration"
+	},
+	"Range-Based For (C++11)": {
+		"prefix": "for",
+		"body": [
+			"for (auto&& ${1:item} : ${2:container}) {",
+			"\t$0",
+			"}",
+		],
+		"description": "Range-based for loop with universal reference"
+	},
+	"Std::Format (C++20)": {
+		"prefix": "std::format",
+		"body": "std::format(\"${1:{}}\", ${2:value});",
+		"description": "Type-safe string formatting"
+	},
+	"Std::PrintLn (C++20)": {
+		"prefix": "std::println",
+		"body": "std::println(\"${1:{}}\", ${2:value});",
+		"description": "Type-safe string printing"
+	},
+	"Std::Span (C++20)": {
+		"prefix": "std::span",
+		"body": "std::span<${1:const} ${2:int}> ${3:name}${4:{${5:data}, ${6:size}}};",
+		"description": "Non-owning view of a contiguous sequence"
+	},
+	"Std::Array (C++20)": {
+		"prefix": "std::array",
+		"body": "std::array<${1:const} ${2:int}> ${3:name}${4:{${5:data}, ${6:size}}};",
+		"description": "Non-owning view of a contiguous sequence"
+	},
+	"Coroutine (C++20)": {
+		"prefix": "__task",
+		"body": [
+			"struct ${1:Task} {",
+			"\tstruct promise_type {",
+			"\t\t${1} get_return_object() { return {}; }",
+			"\t\tstd::suspend_never initial_suspend() { return {}; }",
+			"\t\tstd::suspend_never final_suspend() noexcept { return {}; }",
+			"\t\tvoid return_void() {}",
+			"\t\tvoid unhandled_exception() { std::terminate(); }",
+			"\t};",
+			"};",
+			"",
+			"${1} ${2:func_name}() {",
+			"\tco_await ${3:expression};",
+			"\t$0",
+			"}"
+		],
+		"description": "C++20 coroutine skeleton"
+	},
+	"Debug Assert": {
+		"prefix": "assert",
+		"body": [
+			"#ifndef _NDEBUG",
+			"assert(${1:condition} && \"${2:message}\");",
+			"#endif",
+			"$0"
+		],
+		"description": "Debug-only assertion with message"
+	},
+	"Benchmark Snippet": {
+		"prefix": "bench",
+		"body": [
+			"auto start = std::chrono::high_resolution_clock::now();",
+			"${1:code_to_benchmark}",
+			"auto end = std::chrono::high_resolution_clock::now();",
+			"std::cout << \"Time: \" << std::chrono::duration_cast<std::chrono::${2:milliseconds}>(end - start).count() << \"${3:ms}\\n\";",
+			"$0"
+		],
+		"description": "Simple benchmarking code"
+	},
+	"Header Guard": {
+		"prefix": "#ifndef",
+		"body": [
+			"#ifndef ${1/(.*)/${1:/upcase}_H_/}",
+			"#define $1",
+			"",
+			"$0",
+			"",
+			"#endif // $1"
+		],
+		"description": "Include guard with automatic uppercase"
+	},
+	"Defer Macro": {
+		"prefix": "defer",
+		"body": [
+			"auto ${1:defer_action} = [&]() ${3:noexcept} { $2 };",
+			"$0"
+		],
+		"description": "Scope guard using lambda (RAII alternative)"
+	},
+	"Move Constructor": {
+		"prefix": "move-constructor",
+		"body": [
+			"${1:Class}($1&& other) noexcept",
+			"\t: ${2:member}(std::move(other.${2:member}))",
+			"{}",
+			"$0"
+		],
+		"description": "Move constructor with noexcept"
+	},
+	"Perfect Forwarding": {
+		"prefix": "std::forward",
+		"body": "std::forward<${1:T}>(${2:value})",
+		"description": "Perfect forwarding wrapper"
+	},
+	"Static Assert (C++17)": {
+		"prefix": "static_assert",
+		"body": "static_assert(${1:condition}, \"${2:message}\");",
+		"description": "Compile-time assertion with message"
+	},
+	"Type Trait Check": {
+		"prefix": "if constexpr",
+		"body": [
+			"if constexpr (std::is_${1:same}_v<${2:T1}, ${3:T2}>) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Compile-time type trait check"
+	},
+	"Std::jthread (C++20)": {
+		"prefix": "std::jthread",
+		"body": [
+			"std::jthread ${1:thread}([](${2:std::stop_token stoken}) {",
+			"\twhile (!stoken.stop_requested()) {",
+			"\t\t$0",
+			"\t}",
+			"});"
+		],
+		"description": "C++20 stoppable thread"
+	},
+	"Atomic with Memory Order": {
+		"prefix": "std::atomic",
+		"body": "std::atomic<${1:int}> ${2:var}${3:{${4:init_value}}};",
+		"description": "Atomic variable with optional initializer"
+	}
+}
